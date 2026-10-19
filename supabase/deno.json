@@ -1,0 +1,13 @@
+{
+  "compilerOptions": { "strict": true, "lib": ["deno.ns", "dom", "esnext"] },
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.118.0",
+    "pg": "npm:pg@8.16.3"
+  },
+  "tasks": {
+    "test": "deno test tests/handlers_test.ts tests/adapters_test.ts",
+    "test:db": "deno test --allow-env --allow-net=127.0.0.1 --allow-read=. tests/database_test.ts",
+    "check": "deno check functions/create-invoice/index.ts functions/xendit-webhook/index.ts tests/handlers_test.ts tests/adapters_test.ts tests/database_test.ts"
+  },
+  "fmt": { "lineWidth": 100 }
+}

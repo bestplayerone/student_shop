@@ -1,0 +1,7 @@
+project_id = "bmc-campus-store"
+
+[functions.create-invoice]
+verify_jwt = true
+
+[functions.xendit-webhook]
+verify_jwt = false
